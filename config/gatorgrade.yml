@@ -1,0 +1,167 @@
+# Check that the technical writing reflection is complete
+- writing/reflection.md:
+  - description: Ensure that reflection.md exists in the writing/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs and remove the TODO markers from writing/reflection.md
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Replace the name prompt in writing/reflection.md
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+
+# Check that each tutorial Python work file is complete and has the student's name
+- tutorials/tutorial_01/src/ping_client.py:
+  - description: Ensure that ping_client.py exists
+    check: ConfirmFileExists
+  - description: Complete all TODOs and remove the TODO markers from ping_client.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Replace the name prompt in ping_client.py
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+
+- tutorials/tutorial_01/src/ping_server.py:
+  - description: Ensure that ping_server.py exists
+    check: ConfirmFileExists
+  - description: Complete all TODOs and remove the TODO markers from ping_server.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Replace the name prompt in ping_server.py
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+
+- tutorials/tutorial_01/src/ping_stats.py:
+  - description: Ensure that ping_stats.py exists
+    check: ConfirmFileExists
+  - description: Complete all TODOs and remove the TODO markers from ping_stats.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Replace the name prompt in ping_stats.py
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+
+- tutorials/tutorial_01/src/show_my_ip.py:
+  - description: Ensure that show_my_ip.py exists
+    check: ConfirmFileExists
+  - description: Complete all TODOs and remove the TODO markers from show_my_ip.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Replace the name prompt in show_my_ip.py
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+
+- tutorials/tutorial_02/src/chat_client.py:
+  - description: Ensure that chat_client.py exists
+    check: ConfirmFileExists
+  - description: Complete all TODOs and remove the TODO markers from chat_client.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Replace the name prompt in chat_client.py
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+
+- tutorials/tutorial_02/src/chat_server.py:
+  - description: Ensure that chat_server.py exists
+    check: ConfirmFileExists
+  - description: Complete all TODOs and remove the TODO markers from chat_server.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Replace the name prompt in chat_server.py
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+
+- tutorials/tutorial_03/src/game_client.py:
+  - description: Ensure that game_client.py exists
+    check: ConfirmFileExists
+  - description: Complete all TODOs and remove the TODO markers from game_client.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Replace the name prompt in game_client.py
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+
+- tutorials/tutorial_03/src/game_server.py:
+  - description: Ensure that game_server.py exists
+    check: ConfirmFileExists
+  - description: Complete all TODOs and remove the TODO markers from game_server.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Replace the name prompt in game_server.py
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+
+- tutorials/tutorial_03/src/game_settings.py:
+  - description: Ensure that game_settings.py exists
+    check: ConfirmFileExists
+  - description: Complete all TODOs and remove the TODO markers from game_settings.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Replace the name prompt in game_settings.py
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+
+# Count the number of commits in the GitHub repository
+- description: Have at least 5 commits in the repository
+  check: CountCommits
+  options:
+    count: 5

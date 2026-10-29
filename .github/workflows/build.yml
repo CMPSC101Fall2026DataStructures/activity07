@@ -1,0 +1,29 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Repository Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - name: Run GatorGrader with GatorGrade
+        if: always()
+        env:
+          SDL_VIDEODRIVER: dummy
+          SDL_AUDIODRIVER: dummy
+        run: |
+          pip install gatorgrade
+          gatorgrade --config config/gatorgrade.yml
